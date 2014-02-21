@@ -1,6 +1,6 @@
 # Vagrantfile for redis lab
 
-Vagrant file that deploys two CentOS 6.5 vms on virtualbox to be used in a redis learning lab.  
+Vagrant file that deploys two [CentOS 6.5](https://github.com/2creatives/vagrant-centos/releases) vms on virtualbox to be used in a redis learning lab.  
 
 Install [Vagrant](http://www.vagrantup.com/) and [VirtualBox](https://www.virtualbox.org/) before running the below snippet. 
 
