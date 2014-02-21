@@ -1,0 +1,22 @@
+# -*- mode: ruby -*-
+# # vi: set ft=ruby :
+
+Vagrant.configure(2) do |config|
+    config.vm.box = "centos65-x86_64-20140116"
+    config.vm.box_url = "https://github.com/2creatives/vagrant-centos/releases/download/v6.5.3/centos65-x86_64-20140116.box"
+    
+    config.vm.provision "shell", path: "labsetup.sh"
+
+    config.vm.define "redismaster" do |redismaster|
+        redismaster.vm.box = "centos65-x86_64-20140116"
+        redismaster.vm.hostname = "redismaster"
+        redismaster.vm.network "private_network", ip: "192.168.150.5"
+    end
+
+    config.vm.define "redisslave" do |redisslave|
+        redisslave.vm.box = "centos65-x86_64-20140116"
+        redisslave.vm.hostname = "redisslave"
+        redisslave.vm.network "private_network", ip: "192.168.150.10"
+    end
+
+end
