@@ -2,6 +2,7 @@
 # # vi: set ft=ruby :
 
 Vagrant.configure(2) do |config|
+    # https://vagrantcloud.com/chef/centos-6.5
     config.vm.box = "chef/centos-6.5"
     
     config.vm.provision "shell", path: "labsetup.sh"
